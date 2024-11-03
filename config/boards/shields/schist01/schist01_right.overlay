@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "corne36.dtsi"
+#include "schist01.dtsi"
 
 &default_transform {
 	col-offset = <5>;
@@ -32,10 +32,10 @@
 	};
 };
 
-// #include "corne36__trackball_adns9800.dtsi"
-// #include "corne36__trackball_pmw3610.dtsi"
-// #include "corne36__trackpoint_ps2.dtsi"
-// #include "corne36__touchpad_cirque.dtsi"
+// #include "schist01__trackball_adns9800.dtsi"
+// #include "schist01__trackball_pmw3610.dtsi"
+// #include "schist01__trackpoint_ps2.dtsi"
+// #include "schist01__touchpad_cirque.dtsi"
 
 / {
 	pd0: virtual_input_0 {
@@ -71,7 +71,7 @@
 // 		sensors = <&s_encoder>;
 // };
 
-// #include "corne36__haptic_drv2605.dtsi"
+// #include "schist01__haptic_drv2605.dtsi"
 // /{
 // 	fb_lra0: fb_lra0 {
 // 		compatible = "zmk,output-haptic-feedback";

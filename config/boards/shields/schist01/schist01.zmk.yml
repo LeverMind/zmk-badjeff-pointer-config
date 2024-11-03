@@ -1,0 +1,16 @@
+file_format: "1"
+id: schist01
+name: schist01
+type: shield
+url: https://github.com/badjeff/schist01/
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
+siblings:
+  - schist01_left
+  - schist01_right
+  - schist01_tball0
+  - schist01_tball1
+  - schist01_tpoint0
+  - schist01_tpad0

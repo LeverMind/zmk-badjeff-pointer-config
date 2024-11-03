@@ -43,11 +43,11 @@ RC(4,0) RC(4,1) RC(4,2)
 	};
 };
 
-// #include "corne36_trackball_adns9800.dtsi"
-// #include "corne36_trackball_pmw3610.dtsi"
-// #include "corne36_trackpoint_ps2.dtsi"
-// #include "corne36_touchpad_cirque.dtsi" 
-#include "corne36_tpoint0_ps2.dtsi" 
+// #include "schist01_trackball_adns9800.dtsi"
+// #include "schist01_trackball_pmw3610.dtsi"
+// #include "schist01_trackpoint_ps2.dtsi"
+// #include "schist01_touchpad_cirque.dtsi" 
+#include "schist01_tpoint0_ps2.dtsi" 
 
 / {
 	pd0: virtual_input_0 {
@@ -153,7 +153,7 @@ RC(4,0) RC(4,1) RC(4,2)
 // 		sensors = <&s_encoder>;
 // };
 
-// #include "corne36__haptic_drv2605.dtsi"
+// #include "schist01__haptic_drv2605.dtsi"
 // /{
 // 	fb_lra0: fb_lra0 {
 // 		compatible = "zmk,output-haptic-feedback";
