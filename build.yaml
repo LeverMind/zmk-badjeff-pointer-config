@@ -15,6 +15,7 @@
 include:
   # - board: nice_nano_v2
   #   shield: settings_reset
+  #testcomment
 
   - board: nice_nano_v2
     shield: schist01
