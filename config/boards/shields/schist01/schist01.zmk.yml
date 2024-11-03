@@ -2,7 +2,7 @@ file_format: "1"
 id: schist01
 name: schist01
 type: shield
-url: https://github.com/badjeff/schist01/
+url: https://github.com/badjeff/corne36/
 requires: [pro_micro]
 exposes: []
 features:
