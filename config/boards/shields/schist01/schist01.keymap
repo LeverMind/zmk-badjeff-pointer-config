@@ -21,13 +21,13 @@
 #include <behaviors/insomnia.dtsi>
 #include <dt-bindings/zmk/insomnia.h>
 
-#define DEF 0
-#define TSP 1
-#define GME 2
-#define LHB 3
-#define NUM 4
-#define MSK 5
-#define MSC 6
+#define default_layer 0
+#define Layer1 1
+#define layer2 2
+// #define LHB 3
+// #define NUM 4
+// #define MSK 5
+// #define MSC 6
 
 #ifndef MOVE_Y
 #define MOVE_Y(n) (0)

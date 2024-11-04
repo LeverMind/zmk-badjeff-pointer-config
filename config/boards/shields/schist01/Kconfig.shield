@@ -2,20 +2,20 @@
 # SPDX-License-Identifier: MIT
 
 
-config SHIELD_schist01_LEFT
-	def_bool $(shields_list_contains,schist01_left)
+# config SHIELD_schist01_LEFT
+# 	def_bool $(shields_list_contains,schist01_left)
 
-config SHIELD_schist01_RIGHT
-	def_bool $(shields_list_contains,schist01_right)
+# config SHIELD_schist01_RIGHT
+# 	def_bool $(shields_list_contains,schist01_right)
 
-config SHIELD_schist01_TBALL0
-	def_bool $(shields_list_contains,schist01_tball0)
+# config SHIELD_schist01_TBALL0
+# 	def_bool $(shields_list_contains,schist01_tball0)
 
-config SHIELD_schist01_TBALL1
-	def_bool $(shields_list_contains,schist01_tball1)
+# config SHIELD_schist01_TBALL1
+# 	def_bool $(shields_list_contains,schist01_tball1)
 
-config SHIELD_schist01_TPOINT0
-	def_bool $(shields_list_contains,schist01_tpoint0)
+# config SHIELD_schist01_TPOINT0
+# 	def_bool $(shields_list_contains,schist01_tpoint0)
 
 config SHIELD_schist01_TPAD0
 	def_bool $(shields_list_contains,schist01_tpad0)
