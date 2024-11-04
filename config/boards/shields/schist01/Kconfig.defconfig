@@ -1,37 +1,45 @@
-if SHIELD_schist01_LEFT
+// if SHIELD_schist01_LEFT
+
+// config ZMK_KEYBOARD_NAME
+//     default "schist01"
+
+// config ZMK_SPLIT_ROLE_CENTRAL
+//     default y
+
+// endif
+
+// if SHIELD_schist01_LEFT || SHIELD_schist01_RIGHT
+
+// config ZMK_SPLIT
+//     default y
+
+// endif
+
+// if SHIELD_schist01_TBALL0 || SHIELD_schist01_TBALL1
+
+// config ZMK_SPLIT
+//     default y
+
+// endif
+
+// if SHIELD_schist01_TPOINT0
+
+// config ZMK_SPLIT
+//     default y
+
+// endif
+
+// if SHIELD_schist01_TPAD0
+
+// config ZMK_SPLIT
+//     default y
+
+// endif
+if SHIELD_SCHIST01
 
 config ZMK_KEYBOARD_NAME
     default "schist01"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_schist01_LEFT || SHIELD_schist01_RIGHT
-
-config ZMK_SPLIT
-    default y
-
-endif
-
-if SHIELD_schist01_TBALL0 || SHIELD_schist01_TBALL1
-
-config ZMK_SPLIT
-    default y
-
-endif
-
-if SHIELD_schist01_TPOINT0
-
-config ZMK_SPLIT
-    default y
-
-endif
-
-if SHIELD_schist01_TPAD0
-
-config ZMK_SPLIT
-    default y
-
+CONFIG_ZMK_MOUSE=y
+CONFIG_CIRQUE_TRACKPAD=y
+CONFIG_CIRQUE_TRACKPAD_SPI=y
 endif
