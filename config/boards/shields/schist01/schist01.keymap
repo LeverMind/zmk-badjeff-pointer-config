@@ -103,7 +103,7 @@
         tball0_mmv_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tball0>;
-                layers = <DEF TSP GME LHB NUM MSK>;
+                layers = <default_layer layer1 layer2>;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
@@ -112,7 +112,7 @@
         tball0_msl_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tball0>;
-                layers = <MSC>;
+                layers = <default_layer layer1 layer2>;
                 evt-type = <INPUT_EV_REL>;
                 x-input-code = <INPUT_REL_MISC>;
                 y-input-code = <INPUT_REL_WHEEL>;
@@ -124,7 +124,7 @@
                 compatible = "zmk,input-behavior-listener";
                 device = <&tball1>;
                 // layers = <DEF TSP GME LHB NUM MSK>;
-                layers = <DEF TSP GME LHB MSK>;
+                layers = <default_layer layer1 layer2>;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
@@ -134,7 +134,7 @@
         tball1_mmv_ibl__PRECISE__ {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tball1>;
-                layers = < NUM >;
+                layers = < default_layer layer1 layer2 >;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
@@ -145,7 +145,7 @@
         tball1_msl_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tball1>;
-                layers = <MSC>;
+                layers = <default_layer layer1 layer2>;
                 evt-type = <INPUT_EV_REL>;
                 x-input-code = <INPUT_REL_MISC>;
                 y-input-code = <INPUT_REL_WHEEL>;
@@ -186,7 +186,7 @@
         tpoint0_mmv_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tpoint0>;
-                layers = <DEF TSP GME LHB NUM MSK>;
+                layers = <default_layer layer1 layer2>;
 	        evt-type = <INPUT_EV_REL>;
 	        x-input-code = <INPUT_REL_X>;
 	        y-input-code = <INPUT_REL_Y>;
@@ -196,7 +196,7 @@
         tpoint0_msl_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tpoint0>;
-                layers = <MSC>;
+                layers = <default_layer layer1 layer2>;
                 evt-type = <INPUT_EV_REL>;
                 x-input-code = <INPUT_REL_MISC>;
                 y-input-code = <INPUT_REL_WHEEL>;
@@ -207,7 +207,7 @@
                 compatible = "zmk,input-behavior-listener";
                 device = <&tpad0>;
                 // layers = <DEF TSP GME LHB NUM MSK>;
-                layers = <DEF TSP GME LHB MSK>;
+                layers = <default_layer layer1 layer2>;
                 // bindings = <&ib_tog_layer MSK>;
                 // bindings = <&ib_fwd_to_hid_io>;
                 y-invert;
@@ -221,7 +221,7 @@
         tpad0_mmv_ibl__PRECISE__ {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tpad0>;
-                layers = < NUM >;
+                layers = <default_layer layer1 layer2>;
                 // bindings = <&ib_tog_layer MSK>;
                 // bindings = <&ib_fwd_to_hid_io>;
                 y-invert;
@@ -235,7 +235,7 @@
         tpad0_msl_ibl {
                 compatible = "zmk,input-behavior-listener";
                 device = <&tpad0>;
-                layers = <MSC>;
+                layers = <default_layer layer1 layer2>;
                 /* NOTE: only apply input-code overriding for INPUT_EV_REL */
                 evt-type = <INPUT_EV_REL>;
                 x-input-code = <INPUT_REL_MISC>;
