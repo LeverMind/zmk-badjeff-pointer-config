@@ -21,6 +21,7 @@
 
 #include <behaviors/insomnia.dtsi>
 #include <dt-bindings/zmk/insomnia.h>
+#include <input/processors.dtsi>
 
 #define default_layer 0
 #define layer1 1
