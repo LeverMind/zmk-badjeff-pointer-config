@@ -19,3 +19,4 @@
 
 config SHIELD_schist01_TPAD0
 	def_bool $(shields_list_contains,schist01_tpad0)
+
