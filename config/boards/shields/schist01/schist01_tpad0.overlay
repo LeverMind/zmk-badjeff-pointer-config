@@ -86,8 +86,8 @@
 // #include "schist01_trackball_adns9800.dtsi"
 // #include "schist01_trackball_pmw3610.dtsi"
 // #include "schist01_trackpoint_ps2.dtsi"
- #include "schist01_touchpad_cirque.dtsi" 
-//#include "schist01_tpad0_cirque.dtsi" 
+// #include "schist01_touchpad_cirque.dtsi" 
+#include "schist01_tpad0_cirque.dtsi" 
 
 / {
 	pd0: virtual_input_0 {
