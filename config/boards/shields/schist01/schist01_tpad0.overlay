@@ -90,7 +90,7 @@
 // #include "schist01_touchpad_cirque.dtsi" 
 #include "schist01_tpad0_cirque.dtsi" 
 
-&tpad0_split { device = <&tpad0>; };
+&tpad0 { device = <&tpad0>; };
 
 / {
 	pd0: virtual_input_0 {
