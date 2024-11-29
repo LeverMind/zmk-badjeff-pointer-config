@@ -6,7 +6,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "schist01_tpad0_cirque.dtsi" 
-&tpoint0 { status = "okay"; };
+&tpad0 { status = "okay"; };
 
 / {
 	chosen {

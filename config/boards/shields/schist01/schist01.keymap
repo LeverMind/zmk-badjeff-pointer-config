@@ -128,7 +128,7 @@
 
         tpad0_mmv_il {
                 compatible = "zmk,input-listener";
-                device = <&tpad0_test>;
+                device = <&tpad0>;
                 input-processors = <&xy_transf (INPUT_TRANSFORM_Y_INVERT)>;
                 precise {
                         layers = <default_layer>;
