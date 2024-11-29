@@ -5,6 +5,8 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "schist01_tpad0_cirque.dtsi" 
+&tpoint0 { status = "okay"; };
 
 / {
 	chosen {
@@ -48,6 +50,7 @@
             RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7)
         >;
     };
+
 // 	chosen {
 // 		zmk,kscan = &kscan0;
 // 		zmk,matrix-transform = &default_transform;
@@ -88,9 +91,7 @@
 // #include "schist01_trackball_pmw3610.dtsi"
 // #include "schist01_trackpoint_ps2.dtsi"
 // #include "schist01_touchpad_cirque.dtsi" 
-#include "schist01_tpad0_cirque.dtsi" 
 
-&tpad0_test { device = <&tpad0>; };
 
 // / {
 // 	pd0: virtual_input_0 {
