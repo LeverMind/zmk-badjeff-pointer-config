@@ -6,6 +6,9 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include "schist01_tpad0_cirque.dtsi" 
+&tpad0 { status = "okay"; };
+&spi2 {status = "okay";};
 
 / {
 	chosen {
