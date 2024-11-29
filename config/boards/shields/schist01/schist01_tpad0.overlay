@@ -93,119 +93,119 @@
 // #include "schist01_touchpad_cirque.dtsi" 
 
 
+/ {
+	// pd0: virtual_input_0 {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	// pd1: virtual_input_1 {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	// tball0: virtual_input_tb_1 {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	// tball1: virtual_input_tb_2 {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	// tpoint0: virtual_input_tp {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	tpad0: virtual_input_gp {
+		compatible = "zmk,virtual-input";
+	};
+	mou0: virtual_input_mo_0 {
+			compatible = "zmk,virtual-input";
+	};
+	// input_relay_config_102 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <102>;
+	// 	device = <&pd1>;
+	// };
+	// input_relay_config_103 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <103>;
+	// 	device = <&tball0>;
+	// };
+	// input_relay_config_104 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <104>;
+	// 	device = <&tball1>;
+	// };
+	// input_relay_config_105 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <105>;
+	// 	device = <&tpoint0>;
+	// };
+	input_relay_config_106 {
+		compatible = "zmk,split-peripheral-input-relay";
+		relay-channel = <106>;
+		device = <&tpad0>;
+	};
+};
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+// &adc {
+// 	status = "okay";
+// };
+
 // / {
-// 	pd0: virtual_input_0 {
-// 		compatible = "zmk,virtual-input";
-// 	};
-// 	pd1: virtual_input_1 {
-// 		compatible = "zmk,virtual-input";
-// 	};
-// 	// tball0: virtual_input_tb_1 {
-// 	// 	compatible = "zmk,virtual-input";
-// 	// };
-// 	// tball1: virtual_input_tb_2 {
-// 	// 	compatible = "zmk,virtual-input";
-// 	// };
-// 	// tpoint0: virtual_input_tp {
-// 	// 	compatible = "zmk,virtual-input";
-// 	// };
-// 	tpad0: virtual_input_gp {
-// 		compatible = "zmk,virtual-input";
-// 	 };
-// 		mou0: virtual_input_mo_0 {
-// 			compatible = "zmk,virtual-input";
+// 	anin0: analog_input_0 {
+// 		compatible = "zmk,analog-input";
+// 		sampling-hz = <100>;
+// 		x-ch {
+// 			io-channels = <&adc 2>;
+// 			mv-mid = <1630>;
+// 			mv-min-max = <1600>;
+// 			mv-deadzone = <10>;
+// 			scale-multiplier = <1>;
+// 			scale-divisor = <70>;
+// 			invert;
+// 			evt-type = <INPUT_EV_REL>;
+// 			input-code = <INPUT_REL_X>;
 // 		};
-// 	// input_relay_config_102 {
-// 	// 	compatible = "zmk,split-peripheral-input-relay";
-// 	// 	relay-channel = <102>;
-// 	// 	device = <&pd1>;
-// 	// };
-// 	// input_relay_config_103 {
-// 	// 	compatible = "zmk,split-peripheral-input-relay";
-// 	// 	relay-channel = <103>;
-// 	// 	device = <&tball0>;
-// 	// };
-// 	// input_relay_config_104 {
-// 	// 	compatible = "zmk,split-peripheral-input-relay";
-// 	// 	relay-channel = <104>;
-// 	// 	device = <&tball1>;
-// 	// };
-// 	// input_relay_config_105 {
-// 	// 	compatible = "zmk,split-peripheral-input-relay";
-// 	// 	relay-channel = <105>;
-// 	// 	device = <&tpoint0>;
-// 	// };
-// 	input_relay_config_106 {
-// 		compatible = "zmk,split-peripheral-input-relay";
-// 		relay-channel = <106>;
-// 		device = <&tpad0>;
+// 		y-ch {
+// 			io-channels = <&adc 3>;
+// 			mv-mid = <1630>;
+// 			mv-min-max = <1600>;
+// 			mv-deadzone = <10>;
+// 			scale-multiplier = <1>;
+// 			scale-divisor = <70>;
+// 			invert;
+// 			evt-type = <INPUT_EV_REL>;
+// 			input-code = <INPUT_REL_Y>;
+// 		};
 // 	};
 // };
 
-// #include <zephyr/dt-bindings/input/input-event-codes.h>
+// /{
+// 	s_encoder: s_encoder {
+// 		compatible = "alps,ec11";
+// 		a-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+// 		b-gpios = <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+// 		steps = <80>;
+// 		status = "disabled";
+// 	};
+// 	sensors: sensors {
+// 		compatible = "zmk,keymap-sensors";
+// 		status = "disabled";
+// 		sensors = <>;
+// 		triggers-per-rotation = <20>;
+// 	};
+// };
+// &s_encoder {
+//     status = "okay";
+// };
+// &sensors {
+// 		status = "okay";
+// 		sensors = <&s_encoder>;
+// };
 
-// // &adc {
-// // 	status = "okay";
-// // };
-
-// // / {
-// // 	anin0: analog_input_0 {
-// // 		compatible = "zmk,analog-input";
-// // 		sampling-hz = <100>;
-// // 		x-ch {
-// // 			io-channels = <&adc 2>;
-// // 			mv-mid = <1630>;
-// // 			mv-min-max = <1600>;
-// // 			mv-deadzone = <10>;
-// // 			scale-multiplier = <1>;
-// // 			scale-divisor = <70>;
-// // 			invert;
-// // 			evt-type = <INPUT_EV_REL>;
-// // 			input-code = <INPUT_REL_X>;
-// // 		};
-// // 		y-ch {
-// // 			io-channels = <&adc 3>;
-// // 			mv-mid = <1630>;
-// // 			mv-min-max = <1600>;
-// // 			mv-deadzone = <10>;
-// // 			scale-multiplier = <1>;
-// // 			scale-divisor = <70>;
-// // 			invert;
-// // 			evt-type = <INPUT_EV_REL>;
-// // 			input-code = <INPUT_REL_Y>;
-// // 		};
-// // 	};
-// // };
-
-// // /{
-// // 	s_encoder: s_encoder {
-// // 		compatible = "alps,ec11";
-// // 		a-gpios = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-// // 		b-gpios = <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-// // 		steps = <80>;
-// // 		status = "disabled";
-// // 	};
-// // 	sensors: sensors {
-// // 		compatible = "zmk,keymap-sensors";
-// // 		status = "disabled";
-// // 		sensors = <>;
-// // 		triggers-per-rotation = <20>;
-// // 	};
-// // };
-// // &s_encoder {
-// //     status = "okay";
-// // };
-// // &sensors {
-// // 		status = "okay";
-// // 		sensors = <&s_encoder>;
-// // };
-
-// // #include "schist01__haptic_drv2605.dtsi"
-// // /{
-// // 	fb_lra0: fb_lra0 {
-// // 		compatible = "zmk,output-haptic-feedback";
-// // 		#binding-cells = <0>;
-// // 		// driver = "drv2605";
-// // 		// device = <&drv2605_0>;
-// // 	};
-// // };
+// #include "schist01__haptic_drv2605.dtsi"
+// /{
+// 	fb_lra0: fb_lra0 {
+// 		compatible = "zmk,output-haptic-feedback";
+// 		#binding-cells = <0>;
+// 		// driver = "drv2605";
+// 		// device = <&drv2605_0>;
+// 	};
+// };
