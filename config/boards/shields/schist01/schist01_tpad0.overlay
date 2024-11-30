@@ -5,9 +5,6 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "schist01_tpad0_cirque.dtsi" 
-&tpad0 { status = "okay"; };
-&spi2 {status = "okay";};
 
 / {
 	chosen {
@@ -86,4 +83,54 @@
 // 			, <&gpio0 28 GPIO_ACTIVE_HIGH>
 // 			;
 // 	};
+&pinctrl {
+	spi0_default: spi0_default {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+							<NRF_PSEL(SPIM_MOSI, 0, 6)>,
+							<NRF_PSEL(SPIM_MISO, 0, 17)>;
+		};
+	};
+	spi0_sleep: spi0_sleep {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+							<NRF_PSEL(SPIM_MOSI, 0, 6)>,
+							<NRF_PSEL(SPIM_MISO, 0, 17)>;
+			low-power-enable;
+		};
+	};
+};
+
+// release gpio1 12 & 13 from xiao_ble-pinctrl.dtsi
+// for &trackball { irq-gpios }
+&uart0 {
+	status = "disabled";
+};
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	tpad0: glidepoint@0 {
+		compatible = "cirque,pinnacle";
+		status = "okay";
+		label = "TOUCHPAD0";
+		reg = <0>;
+		spi-max-frequency = <4000000>;
+		
+	};
+	pinctrl-0 = <&spi0_default>;
+		pinctrl-1 = <&spi0_sleep>;
+		pinctrl-names = "default", "sleep";
+		cs-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+};
+
+&tpad0 {
+  status = "okay";
+	dr-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+	sleep;
+	// no-smoothing;
+	sensitivity = "2x";
+	// no-taps;
+	// rotate-90;
+};
 };
